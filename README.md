@@ -15,4 +15,4 @@ You can select multiple objects in Explorer using Shift and Ctrl. Delete or rena
 
 You can also load scenes from Explorer.
 
-![screenshot2](https://github.com/loolkkekr/TailExplorer/blob/main/gifs/scenes.gif?raw=true)
+![screenshot2](https://github.com/loolkkekr/TailExplorer/blob/main/gifs/scene.gif?raw=true)
