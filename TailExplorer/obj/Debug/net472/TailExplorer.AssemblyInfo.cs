@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TailExplorer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9eec09b0666a889af7c5ddda6762dc5f39c7dfbb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0bb0f74b39219ced3d20ea3cc70c9e770a0062a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TailExplorer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TailExplorer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

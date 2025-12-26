@@ -15,6 +15,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 	  <None Remove="Resources\discord.png" />
+	  <None Remove="Resources\gamebanana.png" />
 	  <None Remove="Resources\github.png" />
 	  <None Remove="Resources\youtube.png" />
 	</ItemGroup>
@@ -307,12 +308,14 @@
 		<Compile Include="ExplorerWindow.cs" />
 		<Compile Include="Main.cs" />
 		<Compile Include="SettingsWindow.cs" />
+		<Compile Include="SnowSystem.cs" />
 		<Compile Include="StyleManager.cs" />
 		<Compile Include="Taskbar.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <EmbeddedResource Include="Resources\discord.png" />
+	  <EmbeddedResource Include="Resources\gamebanana.png" />
 	  <EmbeddedResource Include="Resources\github.png" />
 	  <EmbeddedResource Include="Resources\youtube.png" />
 	</ItemGroup>

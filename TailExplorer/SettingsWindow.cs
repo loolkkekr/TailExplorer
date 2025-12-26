@@ -1,20 +1,18 @@
-﻿using MelonLoader;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace SceneExplorerMod
 {
     public class SettingsWindow
     {
-        // Увеличил высоту по умолчанию с 240 до 270, чтобы влезла новая опция
-        public Rect WindowRect = new Rect(440, 70, 300, 270);
+        public Rect WindowRect = new Rect(440, 70, 300, 350); // Чуть увеличил высоту на случай появления опции снега
         public bool IsRebinding { get; private set; } = false;
+        public float LastRebindTime { get; private set; } = 0f;
 
-        // --- Resize State ---
         private bool _isResizing = false;
         private ResizeDirection _currentResizeDir = ResizeDirection.None;
         private const float ResizeBorder = 10f;
         private const float MinWidth = 280f;
-        private const float MinHeight = 200f;
+        private const float MinHeight = 250f;
         private enum ResizeDirection { None, Left, Right, Top, Bottom, TopLeft, TopRight, BottomLeft, BottomRight }
 
         public void Draw(int id)
@@ -28,21 +26,20 @@ namespace SceneExplorerMod
         {
             Event e = Event.current;
 
-            // HEADER
             GUILayout.BeginHorizontal();
             GUILayout.Label("SETTINGS", StyleManager.Label);
             GUILayout.EndHorizontal();
 
             GUILayout.Space(10);
 
-            // --- SECTION: GENERAL ---
+            // --- GENERAL ---
             GUILayout.Label("General", StyleManager.Label);
 
             GUI.backgroundColor = StyleManager.Colors.HeaderBg;
             GUILayout.BeginVertical("box");
             GUI.backgroundColor = Color.white;
             {
-                // Option 1: Auto Open
+                // Auto Open
                 GUILayout.BeginHorizontal();
                 GUILayout.Label("Auto Open on Start", StyleManager.Label);
                 GUILayout.FlexibleSpace();
@@ -56,7 +53,7 @@ namespace SceneExplorerMod
 
                 GUILayout.Space(5);
 
-                // Option 2: Force Unlock Cursor (Новая опция)
+                // Force Cursor
                 GUILayout.BeginHorizontal();
                 GUILayout.Label("Force Unlock Cursor", StyleManager.Label);
                 GUILayout.FlexibleSpace();
@@ -67,12 +64,34 @@ namespace SceneExplorerMod
                     Main.PrefsCategory.SaveToFile(false);
                 }
                 GUILayout.EndHorizontal();
+
+                // --- HOLIDAY SNOW OPTION ---
+                // Используем закэшированное статическое значение
+                if (Main.IsHolidaySeason)
+                {
+                    GUILayout.Space(5);
+                    GUILayout.BeginHorizontal();
+
+                    GUIStyle holidayLabel = new GUIStyle(StyleManager.Label);
+                    holidayLabel.normal.textColor = new Color(0.6f, 0.9f, 1f);
+                    GUILayout.Label("Show Holiday Snow", holidayLabel);
+
+                    GUILayout.FlexibleSpace();
+                    bool showSnow = Main.PrefShowSnow.Value;
+                    if (DrawCustomCheckbox(showSnow))
+                    {
+                        Main.PrefShowSnow.Value = !showSnow;
+                        Main.PrefsCategory.SaveToFile(false);
+                    }
+                    GUILayout.EndHorizontal();
+                }
+                // ---------------------------
             }
             GUILayout.EndVertical();
 
             GUILayout.Space(10);
 
-            // --- SECTION: CONTROLS ---
+            // --- CONTROLS ---
             GUILayout.Label("Controls", StyleManager.Label);
 
             GUI.backgroundColor = StyleManager.Colors.HeaderBg;
@@ -84,7 +103,6 @@ namespace SceneExplorerMod
                 GUILayout.FlexibleSpace();
 
                 string btnText = IsRebinding ? "Press Any Key..." : Main.PrefMenuKey.Value.ToString();
-
                 GUIStyle btnStyle = new GUIStyle(StyleManager.ButtonMenu);
                 btnStyle.alignment = TextAnchor.MiddleCenter;
 
@@ -99,14 +117,28 @@ namespace SceneExplorerMod
                 {
                     IsRebinding = !IsRebinding;
                 }
-
                 GUI.color = originalColor;
 
                 GUILayout.EndHorizontal();
             }
             GUILayout.EndVertical();
 
-            // --- Info Footer ---
+            GUILayout.Space(15);
+
+            // --- RESET BUTTON ---
+            Color prevBg = GUI.backgroundColor;
+            GUI.backgroundColor = new Color(0.85f, 0.3f, 0.3f);
+            if (GUILayout.Button("Reset Settings", StyleManager.ButtonMenu, GUILayout.Height(26)))
+            {
+                Main.PrefAutoOpen.Value = false;
+                Main.PrefForceCursor.Value = true;
+                Main.PrefMenuKey.Value = KeyCode.F7;
+                Main.PrefShowSnow.Value = true; // Сбрасываем и снег
+                Main.PrefsCategory.SaveToFile(false);
+                IsRebinding = false;
+            }
+            GUI.backgroundColor = prevBg;
+
             GUILayout.FlexibleSpace();
             GUILayout.BeginHorizontal();
             GUILayout.FlexibleSpace();
@@ -124,6 +156,7 @@ namespace SceneExplorerMod
                     Main.PrefMenuKey.Value = e.keyCode;
                     Main.PrefsCategory.SaveToFile(false);
                     IsRebinding = false;
+                    LastRebindTime = Time.unscaledTime;
                     e.Use();
                 }
                 else if (e.keyCode == KeyCode.Escape)
@@ -132,7 +165,6 @@ namespace SceneExplorerMod
                     e.Use();
                 }
             }
-
             if (IsRebinding && e.type == EventType.MouseDown && !WindowRect.Contains(GUIUtility.GUIToScreenPoint(e.mousePosition)))
             {
                 IsRebinding = false;
@@ -151,6 +183,7 @@ namespace SceneExplorerMod
 
         private void HandleResize()
         {
+            // (Код HandleResize остается без изменений, как в вашем примере)
             Event e = Event.current;
             Vector2 m = e.mousePosition;
 

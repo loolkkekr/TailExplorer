@@ -93,10 +93,10 @@ namespace SceneExplorerMod
             GUILayout.Space(spacing);
 
             // Gamebanana
-            //if (DrawStyledIconButton(StyleManager.IconGamebanana, btnSize))
-            //{
-            //    Application.OpenURL("https://gamebanana.com/");
-            //}
+            if (DrawStyledIconButton(StyleManager.IconGamebanana, btnSize))
+            {
+                Application.OpenURL("https://gamebanana.com/mods/642044");
+            }
 
             // Gamejolt
             //if (DrawStyledIconButton(StyleManager.IconGamejolt, btnSize))

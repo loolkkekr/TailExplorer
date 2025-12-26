@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\loolkkekr\\Documents\\GitHub\\TailExplorer\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BE2D87-7784-5F74-9AF4-70D922FB1D8C}|TailExplorer\\TailExplorer.csproj|c:\\users\\loolkkekr\\documents\\github\\tailexplorer\\tailexplorer\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BE2D87-7784-5F74-9AF4-70D922FB1D8C}|TailExplorer\\TailExplorer.csproj|solutionrelative:tailexplorer\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BE2D87-7784-5F74-9AF4-70D922FB1D8C}|TailExplorer\\TailExplorer.csproj|c:\\users\\loolkkekr\\documents\\github\\tailexplorer\\tailexplorer\\snowsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BE2D87-7784-5F74-9AF4-70D922FB1D8C}|TailExplorer\\TailExplorer.csproj|solutionrelative:tailexplorer\\snowsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BE2D87-7784-5F74-9AF4-70D922FB1D8C}|TailExplorer\\TailExplorer.csproj|c:\\users\\loolkkekr\\documents\\github\\tailexplorer\\tailexplorer\\stylemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BE2D87-7784-5F74-9AF4-70D922FB1D8C}|TailExplorer\\TailExplorer.csproj|solutionrelative:tailexplorer\\stylemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7BE2D87-7784-5F74-9AF4-70D922FB1D8C}|TailExplorer\\TailExplorer.csproj|c:\\users\\loolkkekr\\documents\\github\\tailexplorer\\tailexplorer\\settingswindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7BE2D87-7784-5F74-9AF4-70D922FB1D8C}|TailExplorer\\TailExplorer.csproj|solutionrelative:tailexplorer\\settingswindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SnowSystem.cs",
+              "DocumentMoniker": "C:\\Users\\loolkkekr\\Documents\\GitHub\\TailExplorer\\TailExplorer\\SnowSystem.cs",
+              "RelativeDocumentMoniker": "TailExplorer\\SnowSystem.cs",
+              "ToolTip": "C:\\Users\\loolkkekr\\Documents\\GitHub\\TailExplorer\\TailExplorer\\SnowSystem.cs",
+              "RelativeToolTip": "TailExplorer\\SnowSystem.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T18:30:36.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StyleManager.cs",
+              "DocumentMoniker": "C:\\Users\\loolkkekr\\Documents\\GitHub\\TailExplorer\\TailExplorer\\StyleManager.cs",
+              "RelativeDocumentMoniker": "TailExplorer\\StyleManager.cs",
+              "ToolTip": "C:\\Users\\loolkkekr\\Documents\\GitHub\\TailExplorer\\TailExplorer\\StyleManager.cs",
+              "RelativeToolTip": "TailExplorer\\StyleManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T18:03:15.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\loolkkekr\\Documents\\GitHub\\TailExplorer\\TailExplorer\\Main.cs",
+              "RelativeDocumentMoniker": "TailExplorer\\Main.cs",
+              "ToolTip": "C:\\Users\\loolkkekr\\Documents\\GitHub\\TailExplorer\\TailExplorer\\Main.cs",
+              "RelativeToolTip": "TailExplorer\\Main.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAawEQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T17:55:42.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SettingsWindow.cs",
+              "DocumentMoniker": "C:\\Users\\loolkkekr\\Documents\\GitHub\\TailExplorer\\TailExplorer\\SettingsWindow.cs",
+              "RelativeDocumentMoniker": "TailExplorer\\SettingsWindow.cs",
+              "ToolTip": "C:\\Users\\loolkkekr\\Documents\\GitHub\\TailExplorer\\TailExplorer\\SettingsWindow.cs",
+              "RelativeToolTip": "TailExplorer\\SettingsWindow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T17:55:39.646Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
