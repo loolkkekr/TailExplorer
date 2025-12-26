@@ -16,3 +16,7 @@ You can select multiple objects in Explorer using Shift and Ctrl. Delete or rena
 You can also load scenes from Explorer.
 
 ![screenshot2](https://github.com/loolkkekr/TailExplorer/blob/main/gifs/scene.gif?raw=true)
+
+Some minor features have also been added. You can change the position of windows, resize windows, etc., as well as some useful settings.
+
+![screenshot3](https://github.com/loolkkekr/TailExplorer/blob/main/gifs/window.gif?raw=true)
