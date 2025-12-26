@@ -11,4 +11,4 @@ Unity Type: Mono
 
 You can select multiple objects in Explorer using Shift and Ctrl. Delete or rename objects by right-clicking on them in the list.
 
-![screenshot1](https://placeholder.png)
+![screenshot1](https://github.com/loolkkekr/TailExplorer/blob/main/gifs/explorer.gif?raw=true)
